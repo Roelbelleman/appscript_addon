@@ -380,7 +380,7 @@ function Sheet(data, obj) {
   // Save attachments to the created folder with renamed filenames
   for (var k = 0; k < attachments.length; k++) {
     var attachment = attachments[k];
-    var attachmentName = name + " " + Utilities.formatDate(new Date(), "GMT+0", "dd_MM_yyyy") + "_" + attachment.getName();
+    var attachmentName = name + "_" + Utilities.formatDate(new Date(), "GMT+0", "dd_MM_yyyy") + "_" + attachment.getName();
     var file = DriveApp.createFile(attachmentName, attachment);
     file.moveTo(DriveApp.getFolderById(folderId));
   }
